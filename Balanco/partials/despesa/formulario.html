@@ -1,0 +1,139 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="jumbotron jumb-titulo">
+            <h2 class="text-center">
+                <span class="glyphicon glyphicon-euro"></span>
+                &nbsp; Formulário de Despesa Geral
+            </h2>
+            <p class="text-center">Seja bem vindo ao formulário de informações da despesa geral!</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="thumbnail container-painel-home">
+            <p class="text-center">
+                Aqui nesta página você encontrará um cadastro com informações importantes a serem preenchidas. Preencha
+                todos os campos, a fim de deixar o cadastro completo.
+            </p>
+            <p class="text-center">
+                Quando tiver preenchido todas as informações basta clicar em <i>"Salvar"</i>. Caso deseje retornar
+                para a página de listagem dos produtores basta clicar em <i>"Cancelar"</i>.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form novalidate name="formDespesa" ng-submit="submeterDespesa()">
+                    <fieldset>
+                        <legend>Informações Iniciais</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Data da Despesa:</label>
+                                <input id="dataDespesa" ng-model="despesa.data" class="form-control" name="data" type="date" placeholder="Data da Despesa" required/>
+                                <div ng-show="formDespesa.$submitted && formDespesa.data.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha a data da despesa geral!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>ID do Comprador:</label>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="buscaProp()" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                    <input ng-model="despesa.produtorRuralId" class="form-control" name="produtorRuralId" type="text" placeholder="Produtor Rural" value="despesa.produtorRuralId" required/>
+                                </div>
+                                <div ng-show="formDespesa.$submitted && formDespesa.produtorRuralId.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor escolha um produtor rural!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Valor:</label>
+                                <input ng-model="despesa.valor" class="form-control" name="valor" type="number" step="0.01" placeholder="Valor da despesa" required/>
+                                <div ng-show="formDespesa.$submitted && formDespesa.valor.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o valor da despesa!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-6">
+                                <label>Número do Documento Fiscal:</label>
+                                <input ng-model="despesa.numeroDocumento" class="form-control" name="valor" type="text" placeholder="Número do documento fiscal" required ng-minlenght="3" ng-maxlength="10" />
+                                <div ng-show="formDespesa.$submitted && formDespesa.numeroDocumento.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o número do documento fiscal!
+                                </div>
+                                <div ng-show="formDespesa.$submitted && formDespesa.numeroDocumento.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O número do documento fiscal deve possuir no máximo 10 caracteres!
+                                </div>
+                                <div ng-show="formDespesa.$submitted && formDespesa.numeroDocumento.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O número do documento fiscal deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-6">
+                                <label>Nome do Vendedor:</label>
+                                <input ng-model="despesa.nomeVendedor" class="form-control" name="nomeVendedor" type="text" placeholder="Nome do Vendedor" required ng-minlenght="3" ng-maxlength="300" />
+                                <div ng-show="formDespesa.$submitted && formDespesa.nomeVendedor.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o nome do vendedor!
+                                </div>
+                                <div ng-show="formDespesa.$submitted && formDespesa.nomeVendedor.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O vendedor deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formDespesa.$submitted && formDespesa.nomeVendedor.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O vendedor deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Informações Complementares</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-12">
+                                <label>Descrição:</label>
+                                <textarea ng-model="despesa.descricao" class="form-control" name="descricao" type="text" rows="6" placeholder="Descrição da Despesa" ng-minlength="3" ng-maxlength="8000"></textarea>
+                                <div ng-show="formDespesa.$submitted && formDespesa.descricao.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A descrição deve possuir no máximo 8000 caracteres!
+                                </div>
+                                <div ng-show="formDespesa.$submitted && formDespesa.descricao.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A descrição deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        &nbsp;Salvar
+                    </button>
+                    &nbsp;
+                    <a href="" ng-click="voltarPagina()" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        &nbsp;Cancelar
+                    </a>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="loader" ng-hide="!loading">
+                                <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('#dataDespesa').mask('99/99/9999');
+</script>

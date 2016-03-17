@@ -1,0 +1,144 @@
+﻿<main>
+    <div class="container-fluid banner-contato wow fadeInDown">
+        <div class="row">
+            <div class="col-xs-12 col-md-offset-3 col-md-6">
+                <p class="text-center">
+                    <h1 class="text-center">
+                        <span class="glyphicon glyphicon-envelope"></span>
+                        &nbsp;CONTATO
+                    </h1>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid wow fadeInDown">
+        <div class="container container-contato">
+            <div class="row">
+                <form novalidate name="formContato" ng-submit="submeter()">
+                    <fieldset>
+                        <legend class="legend-contato">Entre em contato comigo!</legend>
+                        <div class="row">
+                            <div class="form-group col-md-6 col-xs-12">
+                                <label class="control-label">Nome:</label>
+                                <input name="nomeContato" ng-model="contato.nome" class="form-control" type="text" placeholder="Digite seu nome" required ng-minlength="3" ng-maxlength="300"/>
+                                <div ng-show="formContato.$submitted && formContato.nomeContato.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o nome do contato!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.nomeContato.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.nomeContato.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <label>Nome da Empresa:</label>
+                                <input name="empresaContato" ng-model="contato.empresa" class="form-control" type="text" placeholder="Digite o nome da sua empresa" required ng-minlength="3" ng-maxlength="500"/>
+                                <div ng-show="formContato.$submitted && formContato.empresaContato.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o nome da empresa!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.empresaContato.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome da empresa deve possuir no máximo 500 caracteres!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.empresaContato.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome da empresa deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6 col-xs-12">
+                                <label>E-mail:</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon">@</span>
+                                    <input name="emailContato" ng-model="contato.email" class="form-control" type="email" placeholder="Digite o seu e-mail" ng-maxlength="200" required/>
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.emailContato.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o e-mail!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.emailContato.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O e-mail deve possuir no máximo 200 caracteres!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.emailContato.$error.email" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O e-mail preenchido não é válido!
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6 col-xs-12">
+                                <label>Telefone:</label>
+                                <input id="telefoneContato" name="telefoneContato" ng-model="contato.telefone" class="form-control" type="text" placeholder="Digite aqui o seu telefone" required ng-maxlength="13" ng-minlength="12"/>
+                                <div ng-show="formContato.$submitted && formContato.telefoneContato.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o telefone!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.telefoneContato.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O telefone deve possuir no máximo 13 caracteres!
+                                </div>
+                                <div ng-show="formContato.$submitted && formContato.telefoneContato.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O telefone deve possuir no mínimo 12 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Assunto:</label>
+                            <input name="assuntoContato" ng-model="contato.assunto" class="form-control" type="text" placeholder="Digite aqui o assunto" required ng-maxlength="1000" ng-minlength="3"/>
+                            <div ng-show="formContato.$submitted && formContato.assuntoContato.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                &nbsp;Por favor preencha o assunto!
+                            </div>
+                            <div ng-show="formContato.$submitted && formContato.assuntoContato.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                &nbsp;O assunto deve possuir no máximo 1000 caracteres!
+                            </div>
+                            <div ng-show="formContato.$submitted && formContato.assuntoContato.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                &nbsp;O assunto deve possuir no mínimo 3 caracteres!
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Mensagem:</label>
+                            <textarea name="mensagemContato" ng-model="contato.mensagem" class="form-control" rows="6" placeholder="Digite a sua mensagem" required ng-maxlength="8000" ng-minlength="3"></textarea>
+                            <div ng-show="formContato.$submitted && formContato.mensagemContato.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                &nbsp;Por favor preencha a mensagem!
+                            </div>
+                            <div ng-show="formContato.$submitted && formContato.mensagemContato.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                &nbsp;A mensagem deve possuir no máximo 8000 caracteres!
+                            </div>
+                            <div ng-show="formContato.$submitted && formContato.mensagemContato.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                &nbsp;A mensagem deve possuir no mínimo 3 caracteres!
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-2">
+                            <button id="botaoEnviar" type="submit" class="btn btn-lg btn-primary">
+                                <span class="glyphicon glyphicon-send"></span>
+                                &nbsp; Enviar
+                            </button>
+                        </div>
+                        <div class="col-xs-6 col-sm-1">
+                            <div class="loader" ng-hide="!loading">
+                                <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+    $('#telefoneContato').mask('(99)9999-9999');
+</script>

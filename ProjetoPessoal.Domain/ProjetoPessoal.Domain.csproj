@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{34AC5306-C14F-4087-8FA3-641FAE830CFD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoPessoal.Domain</RootNamespace>
+    <AssemblyName>ProjetoPessoal.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Agenda\Atividade.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\CompraGado.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\DespesaGeral.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\Fazenda.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\Posse.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\ProdutorRural.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\VendaGado.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\ReceitaGeral.cs" />
+    <Compile Include="Entities\BalancoProdutorRural\VendaLeite.cs" />
+    <Compile Include="Entities\Contato\ContatoProfissional.cs" />
+    <Compile Include="Entities\Cotacao\Cotacao.cs" />
+    <Compile Include="Entities\Cotacao\Fornecedor.cs" />
+    <Compile Include="Entities\Cotacao\Produto.cs" />
+    <Compile Include="Entities\Cotacao\Representante.cs" />
+    <Compile Include="Entities\ListaTelefonica\ContatoTelefonico.cs" />
+    <Compile Include="Entities\LivroCaixa\CreditoCaixa.cs" />
+    <Compile Include="Entities\LivroCaixa\DebitoCaixa.cs" />
+    <Compile Include="Entities\Perfil\Contato.cs" />
+    <Compile Include="Entities\Perfil\Endereco.cs" />
+    <Compile Include="Entities\Perfil\Perfil.cs" />
+    <Compile Include="Interfaces\Repositories\Agenda\IAtividadeRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\ICompraGadoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\IDespesaGeralRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\IFazendaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\IPosseRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\IProdutorRuralRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\IReceitaGeralRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\IVendaGadoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\BalancoProdutorRural\IVendaLeiteRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Contato\IContatoProfissionalRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Cotacao\ICotacaoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Cotacao\IFornecedorRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Cotacao\IProdutoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Cotacao\IRepresentanteRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\ListaTelefonica\IContatoTelefonicoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\LivroCaixa\ICreditoCaixaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\LivroCaixa\IDebitoCaixaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\Perfil\IPerfilRepository.cs" />
+    <Compile Include="Interfaces\Services\Agenda\IAtividadeService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\ICompraGadoService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\IDespesaGeralService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\IFazendaService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\IPosseService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\IProdutorRuralService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\IReceitaGeralService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\IVendaGadoService.cs" />
+    <Compile Include="Interfaces\Services\BalancoProdutorRural\IVendaLeiteService.cs" />
+    <Compile Include="Interfaces\Services\Contato\IContatoProfissionalService.cs" />
+    <Compile Include="Interfaces\Services\Cotacao\ICotacaoService.cs" />
+    <Compile Include="Interfaces\Services\Cotacao\IFornecedorService.cs" />
+    <Compile Include="Interfaces\Services\Cotacao\IProdutoService.cs" />
+    <Compile Include="Interfaces\Services\Cotacao\IRepresentanteService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Interfaces\Services\ListaTelefonica\IContatoTelefonicoService.cs" />
+    <Compile Include="Interfaces\Services\LivroCaixa\ICreditoCaixaService.cs" />
+    <Compile Include="Interfaces\Services\LivroCaixa\IDebitoCaixaService.cs" />
+    <Compile Include="Interfaces\Services\Perfil\IPerfilService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

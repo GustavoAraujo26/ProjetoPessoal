@@ -1,0 +1,171 @@
+﻿body {
+    background-color: #e6e6e6;
+}
+/*-------- Customização do menu principal da aplicação ----------*/
+#menu-navegacao {
+    background-color: #0d4136;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    border-color: transparent;
+}
+#menu-navegacao .navbar-brand {
+    font-size: 20px;
+    font-weight: bolder;
+}
+#menu-navegacao .navbar-brand:hover {
+    color: #fff;
+}
+#menu-navegacao .navbar-brand span {
+    font-size: 20px;
+}
+#menu-collapsed li a{
+    font-size: 18px;
+}
+#menu-collapsed li:hover {
+    background-color: #252626;
+    color: #fff;
+}
+.dropdown-menu {
+    background-color: #0d4136;
+}
+.dropdown-menu li a {
+    color: #9d9d9d;
+}
+.dropdown-menu li a:hover {
+    background-color: #252626;
+    color: #fff;
+}
+/*-------- Customização da lista de atalhos da aplicação ----------*/
+#lista-de-atalhos {
+    border-radius: 0;
+    padding: 0;
+}
+.cabecalho-lista-atalhos {
+    background-color: #0d4136;
+    color: #fff;
+    margin: 0;
+    border-radius: 0;
+}
+#lista-de-atalhos span {
+    color: #0d4136;
+}
+/*-------- Customização do banner da aplicação ----------*/
+.banner-aplicacao {
+    background-image: url('../../imagens/banner/banner_produtor_rural.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/*-------- Customização do corpo da aplicação ----------*/
+.corpo-aplicacao {
+    margin-top: 20px;
+}
+.texto-container {
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container-texto-home {
+    margin-top: 55px;
+}
+/*-------- Customização do rodapé da aplicação ----------*/
+.rodape-aplicacao {
+    background-color: #242625;
+    color: #fff;
+    text-align: center;
+    margin-bottom: -20px;
+    padding: 1px 1px;
+}
+/*-------- Customização do container do slide - Home ----------*/
+.painel-simples {
+    padding: 20px 20px;
+    border-radius: 0;
+}
+.fullscreen {
+    width: 100%;
+	padding-top: 10px;
+    padding: 0;
+    margin: 0;
+}
+.texto-imagem-slide {
+    background-color: #070707;
+    background-color: rgba(7, 7, 7, 0.79);
+    padding: 20px 20px;
+}
+/*-------- Customização do container de paineis - Home ----------*/
+.container-painel-home {
+    padding: 20px;
+}
+.titulo-painel-home {
+    border-radius: 0;
+    margin-bottom: 0;
+}
+.painel-home {
+    padding: 0;
+}
+.painel-home-cabecalho {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #0d4136;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.icone-painel-home {
+    -ms-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    background: #0d4136;
+    padding-top: 15px;
+    padding-left: 25px;
+    color: #fff;
+}
+.icone-painel-home:hover {
+    text-decoration: none;
+    background-color: #4e5352;
+    color: #fff;
+}
+/*-------- Customização Cadastro de Produtores Rurais ----------*/
+.banner-produtor {
+    color: #fff;
+    background-image: url('../../imagens/banner/produtor/banner-produtor.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#procura-produtor .input-group-addon {
+    background: #0d4136;
+    color: #fff;
+}
+.alerta-de-erro {
+    margin: 10px;
+    padding: 20px 20px;
+    font-size: 17px;
+}
+.jumbotron-apresentacao {
+    background-color: #0d4136;
+    color: #fff;
+}
+.container-formulario {
+    padding: 20px;
+}
+.panel-success .panel-heading {
+    background-color: #0d4136;
+    color: #fff;
+}
+.jumb-titulo {
+    background-color: #fff;
+}
+.loader {
+    margin-top: 20px;
+}

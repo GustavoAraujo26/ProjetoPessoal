@@ -1,0 +1,110 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="jumbotron banner-header">
+                <h2 class="page-header">
+                    <span class="glyphicon glyphicon-flag"></span>
+                    &nbsp; {{representante.nome}}
+                </h2>
+                <p>Informações Detalhadas do Fornecedor</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="thumbnail texto-explicativo">
+                <p class="text-center">
+                    Aqui nesta página você encontrará todas as informações registradas no sistema referente ao
+                    representante selecionado.
+                </p>
+                <p class="text-center">
+                    Caso deseje alterar alguma informação basta clicar no botão <i>"Editar"</i>. Caso deseje retornar
+                    para a página de listagem dos representantes basta clicar em <i>"Cancelar"</i>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="text-center panel-title">Informações Pessoais</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <ul class="nav nav-tabs">
+                                <li role="presentation" class="active"><a href="" data-target="#tabHome" data-toggle="tab">Informações Iniciais</a></li>
+                                <li role="presentation"><a href="" data-target="#tabContato" data-toggle="tab">Contato</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tabHome">
+                                    <table class="table table-responsive table-striped table-hover">
+                                        <tr>
+                                            <td>Nome:</td>
+                                            <td><strong>{{representante.nome}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apelido:</td>
+                                            <td><strong>{{representante.apelido}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ID do Fornecedor:</td>
+                                            <td><strong>{{representante.fornecedorId}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fornecedor Representado:</td>
+                                            <td><strong>{{representante.fornecedor.razaoSocial}}</strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="tabContato">
+                                    <table class="table table-responsive table-striped table-hover">
+                                        <tr>
+                                            <td>E-mail:</td>
+                                            <td><strong>{{representante.contato.email}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Telefone 1:</td>
+                                            <td><strong>{{representante.contato.telefone1}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Telefone 2:</td>
+                                            <td><strong>{{representante.contato.telefone2}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>LinkedIn:</td>
+                                            <td><strong>{{representante.contato.linkedIn}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Facebook:</td>
+                                            <td><strong>{{representante.contato.facebook}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Observação:</td>
+                                            <td><strong>{{representante.contato.observacao}}</strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="/representante/edit/{{representante.id}}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        &nbsp;Editar
+                    </a>
+                    <a href="/representante" class="btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        &nbsp;Cancelar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

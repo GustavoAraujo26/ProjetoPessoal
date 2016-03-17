@@ -1,0 +1,16 @@
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\ProjetoPessoal.Infra.dll.config
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\ProjetoPessoal.Infra.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\ProjetoPessoal.Infra.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\EntityFramework.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\EntityFramework.SqlServer.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\ProjetoPessoal.Domain.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\ProjetoPessoal.Domain.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\EntityFramework.xml
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Debug\EntityFramework.SqlServer.xml
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Debug\ProjetoPessoal.Infra.csprojResolveAssemblyReference.cache
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Debug\ProjetoPessoal.Infra.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Debug\ProjetoPessoal.Infra.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Debug\ProjetoPessoal.Infra.Migrations.Initial.resources
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Debug\ProjetoPessoal.Infra.csproj.GenerateResource.Cache
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Debug\ProjetoPessoal.Infra.Migrations.RemovendoRestaurante.resources
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Debug\ProjetoPessoal.Infra.Migrations.RemovendoProjetos.resources

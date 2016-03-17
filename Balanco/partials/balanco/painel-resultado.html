@@ -1,0 +1,24 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="text-center panel-title">
+            <span class="glyphicon glyphicon-scale"></span>
+            &nbsp;<b>Resultados - Período de {{ano}}</b>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <table class="table table-responsive table-striped table-hover">
+            <tr class="success">
+                <td>Valor Total das Receitas:</td>
+                <td><strong>{{totalReceitas | currency}}</strong></td>
+            </tr>
+            <tr class="danger">
+                <td>Valor Total das Despesas</td>
+                <td><strong>{{totalDespesas | currency}}</strong></td>
+            </tr>
+            <tr class="info">
+                <td>Saldo:</td>
+                <td><strong>{{resultado | currency}}</strong></td>
+            </tr>
+        </table>
+    </div>
+</div>

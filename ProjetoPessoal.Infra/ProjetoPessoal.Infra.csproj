@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D2263B1-890A-4382-AB61-F3C54646ABF6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoPessoal.Infra</RootNamespace>
+    <AssemblyName>ProjetoPessoal.Infra</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataContext\Contexto.cs" />
+    <Compile Include="Mappings\Agenda\AtividadeMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\CompraGadoMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\DespesaGeralMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\FazendaMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\PosseMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\ProdutorRuralMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\ReceitaGeralMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\VendaGadoMap.cs" />
+    <Compile Include="Mappings\BalancoProdutorRural\VendaLeiteMap.cs" />
+    <Compile Include="Mappings\Contato\ContatoProfissionalMap.cs" />
+    <Compile Include="Mappings\Cotacao\CotacaoMap.cs" />
+    <Compile Include="Mappings\Cotacao\FornecedorMap.cs" />
+    <Compile Include="Mappings\Cotacao\ProdutoMap.cs" />
+    <Compile Include="Mappings\Cotacao\RepresentanteMap.cs" />
+    <Compile Include="Mappings\ListaTelefonica\ContatoTelefonicoMap.cs" />
+    <Compile Include="Mappings\LivroCaixa\CreditoCaixaMap.cs" />
+    <Compile Include="Mappings\LivroCaixa\DebitoCaixaMap.cs" />
+    <Compile Include="Mappings\Perfil\PerfilMap.cs" />
+    <Compile Include="Migrations\201603080132459_Initial.cs" />
+    <Compile Include="Migrations\201603080132459_Initial.Designer.cs">
+      <DependentUpon>201603080132459_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603120217522_RemovendoRestaurante.cs" />
+    <Compile Include="Migrations\201603120217522_RemovendoRestaurante.Designer.cs">
+      <DependentUpon>201603120217522_RemovendoRestaurante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603171541019_RemovendoProjetos.cs" />
+    <Compile Include="Migrations\201603171541019_RemovendoProjetos.Designer.cs">
+      <DependentUpon>201603171541019_RemovendoProjetos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Agenda\AtividadeRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\CompraGadoRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\DespesaGeralRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\FazendaRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\PosseRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\ProdutorRuralRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\ReceitaGeralRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\VendaGadoRepository.cs" />
+    <Compile Include="Repositories\BalancoProdutorRural\VendaLeiteRepository.cs" />
+    <Compile Include="Repositories\Contato\ContatoProfissionalRepository.cs" />
+    <Compile Include="Repositories\Cotacao\CotacaoRepository.cs" />
+    <Compile Include="Repositories\Cotacao\FornecedorRepository.cs" />
+    <Compile Include="Repositories\Cotacao\ProdutoRepository.cs" />
+    <Compile Include="Repositories\Cotacao\RepresentanteRepository.cs" />
+    <Compile Include="Repositories\ListaTelefonica\ContatoTelefonicoRepository.cs" />
+    <Compile Include="Repositories\LivroCaixa\CreditoCaixaRepository.cs" />
+    <Compile Include="Repositories\LivroCaixa\DebitoCaixaRepository.cs" />
+    <Compile Include="Repositories\Perfil\PerfilRepository.cs" />
+    <Compile Include="Repositories\RepositoryBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoPessoal.Domain\ProjetoPessoal.Domain.csproj">
+      <Project>{34ac5306-c14f-4087-8fa3-641fae830cfd}</Project>
+      <Name>ProjetoPessoal.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201603080132459_Initial.resx">
+      <DependentUpon>201603080132459_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603120217522_RemovendoRestaurante.resx">
+      <DependentUpon>201603120217522_RemovendoRestaurante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603171541019_RemovendoProjetos.resx">
+      <DependentUpon>201603171541019_RemovendoProjetos.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

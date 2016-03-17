@@ -1,0 +1,301 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="jumbotron jumb-titulo">
+            <h2 class="text-center">
+                <span class="glyphicon glyphicon-user"></span>
+                &nbsp; Formulário de Produtor Rural
+            </h2>
+            <p class="text-center">Seja bem vindo ao formulário de informações do produtor rural!</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="thumbnail container-painel-home">
+            <p class="text-center">
+                Aqui nesta página você encontrará um cadastro com informações importantes a serem preenchidas. Preencha
+                todos os campos, a fim de deixar o cadastro completo.
+            </p>
+            <p class="text-center">
+                Quando tiver preenchido todas as informações basta clicar em <i>"Salvar"</i>. Caso deseje retornar
+                para a página de listagem dos produtores basta clicar em <i>"Cancelar"</i>.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form novalidate name="formProdutor" ng-submit="submeterProdutor()">
+                    <fieldset>
+                        <legend>Informações Iniciais</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Nome Completo:</label>
+                                <input ng-model="produtor.nome" class="form-control" name="nome" type="text" placeholder="Nome do produtor rural" required ng-minlength="3" ng-maxlength="300" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.nome.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o nome do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.nome.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.nome.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>CPF:</label>
+                                <input id="cpfProdutor" ng-model="produtor.cpf" class="form-control" name="cpf" type="text" placeholder="CPF do produtor rural" required ng-minlength="14" ng-maxlength="14" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.cpf.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o CPF do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.cpf.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O CPF deve possuir no máximo 14 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.cpf.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O CPF deve possuir no mínimo 14 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Inscrição Estadual:</label>
+                                <input ng-model="produtor.inscricaoEstadual" class="form-control" name="inscricao" type="text" placeholder="Inscrição Estadual do produtor rural" required ng-minlength="3" ng-maxlength="20" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.inscricao.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha a inscrição estadual do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.inscricao.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A inscrição estadual deve possuir no máximo 20 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.inscricao.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A inscrição estadual deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Logradouro:</label>
+                                <input ng-model="produtor.endereco.logradouro" class="form-control" name="logradouro" type="text" placeholder="Logradouro do produtor rural" required ng-minlength="3" ng-maxlength="500" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.logradouro.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o logradouro do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.logradouro.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O logradouro deve possuir no máximo 500 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.logradouro.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O logradouro deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Número:</label>
+                                <input ng-model="produtor.endereco.numero" class="form-control" name="numero" type="number" placeholder="Nº" required />
+                                <div ng-show="formProdutor.$submitted && formProdutor.numero.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o número do logradouro do produtor!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Complemento:</label>
+                                <input ng-model="produtor.endereco.complemento" class="form-control" name="complemento" type="text" placeholder="Complemento do logradouro" ng-minlength="3" ng-maxlength="500" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.complemento.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o complemento do logradouro do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.complemento.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O complemento do logradouro deve possuir no máximo 500 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.complemento.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O complemento do logradouro deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>Bairro:</label>
+                                <input ng-model="produtor.endereco.bairro" class="form-control" name="bairro" type="text" placeholder="Bairro do produtor rural" required ng-minlength="3" ng-maxlength="300" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.bairro.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o bairro do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.bairro.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O bairro deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.bairro.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O bairro deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>Cidade:</label>
+                                <input ng-model="produtor.endereco.cidade" class="form-control" name="cidade" type="text" placeholder="Cidade do produtor rural" required ng-minlength="3" ng-maxlength="300" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.cidade.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha a cidade do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.cidade.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A cidade deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.cidade.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A cidade deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>Estado:</label>
+                                <select ng-model="produtor.endereco.estado" name="estado" class="form-control" required>
+                                    <option value="">Escolha um estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RR">Rondônia</option>
+                                    <option value="RR">Roráima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                                <div ng-show="formProdutor.$submitted && formProdutor.estado.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o estado do produtor!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>CEP:</label>
+                                <input id="cepProdutor" ng-model="produtor.endereco.cep" class="form-control" name="cep" type="text" placeholder="CEP do produtor rural" required ng-minlength="10" ng-maxlength="10" />
+                                <div ng-show="formProdutor.$submitted && formProdutor.cep.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o CEP do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.cep.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O CEP deve possuir no máximo 10 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.cep.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O CEP deve possuir no mínimo 10 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contato</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>E-mail:</label>
+                                <input ng-model="produtor.email" class="form-control" name="email" type="email" placeholder="E-mail do produtor rural" required ng-maxlength="200"/>
+                                <div ng-show="formProdutor.$submitted && formProdutor.email.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o e-mail do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.email.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O e-mail deve possuir no máximo 200 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Telefone 1:</label>
+                                <input id="telefoneProdutor1" ng-model="produtor.telefone1" class="form-control" name="telefone1" type="text" placeholder="Telefone do produtor rural" required ng-minlength="11" ng-maxlength="13"/>
+                                <div ng-show="formProdutor.$submitted && formProdutor.telefone1.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o telefone do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.telefone1.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O telefone deve possuir no máximo 13 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.telefone1.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O telefone deve possuir no mínimo 11 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Telefone 2:</label>
+                                <input id="telefoneProdutor2" ng-model="produtor.telefone2" class="form-control" name="telefone2" type="text" placeholder="Telefone do produtor rural" ng-minlength="11" ng-maxlength="13"/>
+                                <div ng-show="formProdutor.$submitted && formProdutor.telefone2.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o telefone do produtor!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.telefone2.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O telefone deve possuir no máximo 13 caracteres!
+                                </div>
+                                <div ng-show="formProdutor.$submitted && formProdutor.telefone2.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O telefone deve possuir no mínimo 11 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-12">
+                                <label>Observação</label>
+                                <textarea ng-model="produtor.observacao" class="form-control" name="observacao" rows="6" placeholder="Observações sobre o produtor rural" ng-minlength="3" ng-maxlength="8000"></textarea>
+                                <div ng-show="formProdutor.$submitted && formProdutor.observacao.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A observação deve possuir no máximo 8000 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        &nbsp;Salvar
+                    </button>
+                    &nbsp;
+                    <a href="" ng-click="voltarPagina()" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        &nbsp;Cancelar
+                    </a>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="loader" ng-hide="!loading">
+                                <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('#cpfProdutor').mask('999.999.999-99');
+    $('#cepProdutor').mask('99.999-999');
+    $('#telefoneProdutor1').mask('(99)9999-9999');
+    $('#telefoneProdutor2').mask('(99)9999-9999');
+</script>

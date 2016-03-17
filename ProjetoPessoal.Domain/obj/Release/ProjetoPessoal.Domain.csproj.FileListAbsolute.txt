@@ -1,0 +1,5 @@
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Domain\bin\Release\ProjetoPessoal.Domain.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Domain\bin\Release\ProjetoPessoal.Domain.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Domain\obj\Release\ProjetoPessoal.Domain.csprojResolveAssemblyReference.cache
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Domain\obj\Release\ProjetoPessoal.Domain.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Domain\obj\Release\ProjetoPessoal.Domain.pdb

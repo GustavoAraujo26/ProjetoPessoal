@@ -1,0 +1,37 @@
+﻿<div class="loader" ng-hide="!carregandoTabela">
+    <img src="../../../imagens/icones/ajax-loader.gif" class="loader" />
+</div>
+<table class="table table-responsive table-hover table-striped table-bordered table-condensed">
+    <thead>
+        <tr>
+            <th><b>Id</b></th>
+            <th><b>Nome</b></th>
+            <th><b>Inscr.Estadual</b></th>
+            <th><b>Ações</b></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="produtor in produtores | filter: filtro: strict | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+            <td>{{produtor.id}}</td>
+            <td>{{produtor.nome}}</td>
+            <td>{{produtor.inscricaoEstadual}}</td>
+            <td>
+                <a href="/produtor/edit/{{produtor.id}}" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    &nbsp;Editar
+                </a>
+                &nbsp;
+                <a ng-click="removerProdutor(produtor)" href="" class="btn btn-danger">
+                    <span class="glyphicon glyphicon-trash"></span>
+                    &nbsp;Apagar
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td ng-show="produtores.length == 0">
+                Não existem produtores cadastrados até o momento!
+            </td>
+        </tr>
+    </tbody>
+</table>
+<uib-pagination total-items="produtores.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>

@@ -1,0 +1,56 @@
+﻿<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="" data-target="#precoTabela" data-toggle="tab">Menor Preço</a></li>
+            <li role="presentation"><a href="" data-target="#produtoTabela" data-toggle="tab">Por Produto</a></li>
+            <li role="presentation"><a href="" data-target="#representanteTabela" data-toggle="tab">Por Representante</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="precoTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input ng-model="filtro.produto.nome" class="form-control" name="nome" type="text" placeholder="Digite aqui o nome a ser pesquisada." />
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/cotacao/tabelas_pesquisa/tabela-menor-preco.html'"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="produtoTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="buscaProd()" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
+                        </span>
+                        <input ng-model="cotacao.produtoId" class="form-control" name="produtoId" type="text" placeholder="Produto da oferta" required/>
+                    </div>
+                    <button class="btn btn-success" ng-click="buscaProdPrecos(cotacao.produtoId)">
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                        &nbsp; Carregar Tabela
+                    </button>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/cotacao/tabelas_pesquisa/tabela-produto-preco.html'"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="representanteTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="buscaRepres()" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
+                        </span>
+                        <input ng-model="cotacao.representanteId" class="form-control" name="representanteId" type="text" placeholder="Representante da oferta" required />
+                    </div>
+                    <button class="btn btn-success" ng-click="buscaRepresPrecos(cotacao.representanteId)">
+                        <span class="glyphicon glyphicon-download-alt"></span>
+                        &nbsp; Carregar Tabela
+                    </button>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/cotacao/tabelas_pesquisa/tabela-representante.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\ProjetoPessoal.Infra.dll.config
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\ProjetoPessoal.Infra.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\ProjetoPessoal.Infra.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\EntityFramework.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\EntityFramework.SqlServer.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\ProjetoPessoal.Domain.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\ProjetoPessoal.Domain.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\EntityFramework.xml
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\bin\Release\EntityFramework.SqlServer.xml
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Release\ProjetoPessoal.Infra.csprojResolveAssemblyReference.cache
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Release\ProjetoPessoal.Infra.Migrations.Initial.resources
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Release\ProjetoPessoal.Infra.csproj.GenerateResource.Cache
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Release\ProjetoPessoal.Infra.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Release\ProjetoPessoal.Infra.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Release\ProjetoPessoal.Infra.Migrations.RemovendoRestaurante.resources
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Infra\obj\Release\ProjetoPessoal.Infra.Migrations.RemovendoProjetos.resources

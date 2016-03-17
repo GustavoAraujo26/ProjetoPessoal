@@ -1,0 +1,35 @@
+﻿<div class="loader" ng-hide="!loading">
+    <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table id="tableProdutor" class="table table-responsive table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                    <tr>
+                        <th><b>Id</b></th>
+                        <th><b>Nome</b></th>
+                        <th><b>Cidade</b></th>
+                        <th><b>Ações</b></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="produtor in produtores | filter: filtro | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+                        <td>{{produtor.id}}</td>
+                        <td>{{produtor.nome}}</td>
+                        <td>{{produtor.endereco.cidade}}</td>
+                        <td>
+                            <button class="btn btn-primary" ng-click="ok(produtor.id, produtor.nome)">
+                                <span class="glyphicon glyphicon-check"></span>
+                                &nbsp;Selecionar
+                            </button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <uib-pagination total-items="produtores.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>
+            </div>
+        </div>
+    </div>
+</div>

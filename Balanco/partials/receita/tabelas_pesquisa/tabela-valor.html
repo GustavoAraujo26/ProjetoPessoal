@@ -1,0 +1,40 @@
+﻿<div class="loader" ng-hide="!carregandoTabela">
+    <img src="../../../imagens/icones/ajax-loader.gif" class="loader" />
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table id="tableProdutor" class="table table-responsive table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th><b>Id</b></th>
+                            <th><b>Descrição</b></th>
+                            <th><b>Valor</b></th>
+                            <th><b>Ações</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="receita in receitas | filter: filtro: strict | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+                            <td>{{receita.id}}</td>
+                            <td>{{receita.descricao}}</td>
+                            <td>{{receita.valor | currency}}</td>
+                            <td>
+                                <a href="/receita/detalhes/{{receita.id}}" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    &nbsp;Detalhar
+                                </a>
+                                &nbsp;
+                                <a ng-click="removerReceita(receita)" href="" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                    &nbsp;Apagar
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <uib-pagination total-items="receitas.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>
+            </div>
+        </div>
+    </div>
+</div>

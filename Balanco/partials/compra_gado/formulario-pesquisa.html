@@ -1,0 +1,70 @@
+﻿<div class="panel panel-default">
+    <div class="panel-body">
+        <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="" data-target="#descricaoTabela" data-toggle="tab">Descrição</a></li>
+            <li role="presentation"><a href="" data-target="#idTabela" data-toggle="tab">ID Prop.</a></li>
+            <li role="presentation"><a href="" data-target="#valorTabela" data-toggle="tab">Valor</a></li>
+            <li role="presentation"><a href="" data-target="#nDocTabela" data-toggle="tab">Nº Documento</a></li>
+            <li role="presentation"><a href="" data-target="#NomeTabela" data-toggle="tab">Nome do Comprador</a></li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane fade in active" id="descricaoTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input ng-model="filtro.descricao" class="form-control" name="pesquisaProdutor" type="text" placeholder="Digite aqui a descrição da compra a ser pesquisada."/>
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/compra_gado/tabelas_pesquisa/tabela-descricao.html'"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="idTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button type="button" ng-click="buscaPropPesquisa()" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
+                        </span>
+                        <input ng-model="filtro.produtorRuralId" class="form-control" name="produtorRuralId" type="text" placeholder="Vendedor" value="compra.produtorRuralId" />
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/compra_gado/tabelas_pesquisa/tabela-id.html'"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="valorTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input ng-model="filtro.valor" class="form-control" name="pesquisaProdutor" type="number" step="0.01" placeholder="Digite aqui o valor da compra a ser pesquisada."/>
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/compra_gado/tabelas_pesquisa/tabela-valor.html'"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nDocTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input ng-model="filtro.numeroDocumento" class="form-control" name="pesquisaProdutor" type="number" step="0.01" placeholder="Digite aqui o numero do documento fiscal a ser pesquisada."/>
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/compra_gado/tabelas_pesquisa/tabela-doc.html'"></div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="NomeTabela">
+                <div class="thumbnail">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input ng-model="filtro.nomeVendedor" class="form-control" name="pesquisaProdutor" type="number" step="0.01" placeholder="Digite aqui o nome do vendedor a ser pesquisada." />
+                    </div>
+                </div>
+                <div class="thumbnail">
+                    <div ng-include src="'partials/compra_gado/tabelas_pesquisa/tabela-nome.html'"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

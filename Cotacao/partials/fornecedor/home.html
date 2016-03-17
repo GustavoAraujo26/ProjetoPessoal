@@ -1,0 +1,48 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="jumbotron banner-header">
+                <h2 class="page-header">
+                    <span class="glyphicon glyphicon-flag"></span>
+                    &nbsp;Cadastro de Fornecedores
+                </h2>
+                <p>Listagem de todos os fornecedores registrados no sistema.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="thumbnail texto-explicativo">
+                <p class="text-center">
+                    Seja bem vindo a área de cadastro de representantes. Aqui você encontrará todos os fornecedores
+                    registrados em nosso sistema. Caso deseje filtrar as informações utilize o campo de pesquisa
+                    para localizar o produto desejado.
+                </p>
+                <p class="text-center">
+                    Logo abaixo você encontrará uma tabela com todos os fornecedores já registrados. Caso deseje ver
+                    mais informações sobre os mesmos basta clicar em <i>"Detalhar"</i>. Caso deseje excluir o mesmo
+                    basta clicar em <i>"Apagar"</i>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input ng-model="filtro" class="form-control" name="pesquisa" type="text" placeholder="Digite aqui o item a ser pesquisado." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div ng-include src="'partials/fornecedor/tabela.html'"></div>
+</div>

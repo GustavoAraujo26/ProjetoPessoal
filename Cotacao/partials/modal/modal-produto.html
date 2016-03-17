@@ -1,0 +1,19 @@
+﻿<div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-click="cancel()">&times;</button>
+    <h4 class="modal-title">Buscando Produto</h4>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div id="procura-produtor" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                        <input ng-model="filtro" class="form-control" name="pesquisaProdutor" type="text" placeholder="Digite aqui o item a ser pesquisado." />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div ng-include src="'partials/modal/tabela-produto.html'"></div>
+</div>

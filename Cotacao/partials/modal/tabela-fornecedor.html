@@ -1,0 +1,35 @@
+﻿<div class="loader" ng-hide="!carregandoTabela">
+    <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table table-responsive table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th><b>Id</b></th>
+                            <th><b>Razão Social</b></th>
+                            <th><b>CNPJ</b></th>
+                            <th><b>Ações</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="fornecedor in fornecedores | filter: filtro | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+                            <td>{{fornecedor.id}}</td>
+                            <td>{{fornecedor.razaoSocial}}</td>
+                            <td>{{fornecedor.cnpj}}</td>
+                            <td>
+                                <button class="btn btn-primary" ng-click="ok(fornecedor.id)">
+                                    <span class="glyphicon glyphicon-check"></span>
+                                    &nbsp;Selecionar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <uib-pagination total-items="fornecedores.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>
+            </div>
+        </div>
+    </div>
+</div>

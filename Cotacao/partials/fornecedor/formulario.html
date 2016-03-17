@@ -1,0 +1,321 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="jumbotron banner-header">
+                <h2 class="page-header">
+                    <span class="glyphicon glyphicon-flag"></span>
+                    &nbsp; Formulário de Fornecedores
+                </h2>
+                <p>Seja bem vindo ao formulário de informações do fornecedor!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="thumbnail texto-explicativo">
+                <p class="text-center">
+                    Aqui nesta página você encontrará um cadastro com informações importantes a serem preenchidas. Preencha
+                    todos os campos, a fim de deixar o cadastro completo.
+                </p>
+                <p class="text-center">
+                    Quando tiver preenchido todas as informações basta clicar em <i>"Salvar"</i>. Caso deseje retornar
+                    para a página de listagem dos produtores basta clicar em <i>"Cancelar"</i>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form novalidate name="formFornecedor" ng-submit="submeterFornecedor()">
+                        <fieldset>
+                            <legend>Informações Iniciais</legend>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>Razão Social:</label>
+                                    <input ng-model="fornecedor.razaoSocial" class="form-control" name="razaoSocial" type="text" placeholder="Razão Social do Fornecedor" required ng-minlength="3" ng-maxlength="300" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.razaoSocial.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha a razão social do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.razaoSocial.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A razão social deve possuir no máximo 300 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.razaoSocial.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;a razão social deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>CNPJ:</label>
+                                    <input id="cnpj" ng-model="fornecedor.cnpj" class="form-control" name="cnpj" type="text" placeholder="CNPJ do Fornecedor" required ng-minlength="18" ng-maxlength="18" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cnpj.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o CNPJ do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cnpj.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O CNPJ deve possuir no máximo 14 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cnpj.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O CNPJ deve possuir no mínimo 14 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>Inscrição Estadual:</label>
+                                    <input ng-model="fornecedor.inscricaoEstadual" class="form-control" name="inscricao" type="text" placeholder="Inscrição Estadual do fornecedor" required ng-minlength="3" ng-maxlength="20" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.inscricao.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha a inscrição estadual do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.inscricao.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A inscrição estadual deve possuir no máximo 20 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.inscricao.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A inscrição estadual deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Endereço</legend>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>Logradouro:</label>
+                                    <input ng-model="fornecedor.endereco.logradouro" class="form-control" name="logradouro" type="text" placeholder="Logradouro do fornecedor" required ng-minlength="3" ng-maxlength="500" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.logradouro.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o logradouro do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.logradouro.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O logradouro deve possuir no máximo 500 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.logradouro.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O logradouro deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>Número:</label>
+                                    <input ng-model="fornecedor.endereco.numero" class="form-control" name="numero" type="number" placeholder="Nº" required />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.numero.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o número do logradouro do fornecedor!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>Complemento:</label>
+                                    <input ng-model="fornecedor.endereco.complemento" class="form-control" name="complemento" type="text" placeholder="Complemento do logradouro" ng-minlength="3" ng-maxlength="500" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.complemento.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o complemento do logradouro do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.complemento.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O complemento do logradouro deve possuir no máximo 500 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.complemento.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O complemento do logradouro deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-3">
+                                    <label>Bairro:</label>
+                                    <input ng-model="fornecedor.endereco.bairro" class="form-control" name="bairro" type="text" placeholder="Bairro do fornecedor" required ng-minlength="3" ng-maxlength="300" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.bairro.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o bairro do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.bairro.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O bairro deve possuir no máximo 300 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.bairro.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O bairro deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-3">
+                                    <label>Cidade:</label>
+                                    <input ng-model="fornecedor.endereco.cidade" class="form-control" name="cidade" type="text" placeholder="Cidade do fornecedor" required ng-minlength="3" ng-maxlength="300" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cidade.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha a cidade do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cidade.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A cidade deve possuir no máximo 300 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cidade.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A cidade deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-3">
+                                    <label>Estado:</label>
+                                    <select ng-model="fornecedor.endereco.estado" name="estado" class="form-control" required>
+                                        <option value="">Escolha um estado</option>
+                                        <option value="AC">Acre</option>
+                                        <option value="AL">Alagoas</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="DF">Distrito Federal</option>
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="GO">Goiás</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PR">Paraná</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="RR">Rondônia</option>
+                                        <option value="RR">Roráima</option>
+                                        <option value="SC">Santa Catarina</option>
+                                        <option value="SP">São Paulo</option>
+                                        <option value="SE">Sergipe</option>
+                                        <option value="TO">Tocantins</option>
+                                    </select>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.estado.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o estado do fornecedor!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-3">
+                                    <label>CEP:</label>
+                                    <input id="cepFornecedor" ng-model="fornecedor.endereco.cep" class="form-control" name="cep" type="text" placeholder="CEP do fornecedor" required ng-minlength="10" ng-maxlength="10" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cep.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o CEP do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cep.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O CEP deve possuir no máximo 10 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.cep.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O CEP deve possuir no mínimo 10 caracteres!
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Contato</legend>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>E-mail:</label>
+                                    <input ng-model="fornecedor.contato.email" class="form-control" name="email" type="email" placeholder="E-mail do fornecedor" required ng-maxlength="200"/>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.email.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o e-mail do produtor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.email.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O e-mail deve possuir no máximo 200 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>Telefone 1:</label>
+                                    <input id="telefone1Fornecedor" ng-model="fornecedor.contato.telefone1" class="form-control" name="telefone1" type="text" placeholder="Telefone do fornecedor" required ng-minlength="11" ng-maxlength="13"/>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.telefone1.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o telefone do fornecedor!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.telefone1.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O telefone deve possuir no máximo 13 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.telefone1.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O telefone deve possuir no mínimo 11 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-4">
+                                    <label>Telefone 2:</label>
+                                    <input id="telefone2Fornecedor" ng-model="fornecedor.contato.telefone2" class="form-control" name="telefone2" type="text" placeholder="Telefone do fornecedor" ng-minlength="11" ng-maxlength="13"/>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.telefone2.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O telefone deve possuir no máximo 13 caracteres!
+                                    </div>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.telefone2.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O telefone deve possuir no mínimo 11 caracteres!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-6">
+                                    <label>Facebook:</label>
+                                    <input ng-model="fornecedor.contato.facebook" class="form-control" name="facebook" type="url" placeholder="Facebook do fornecedor" ng-maxlength="500" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.facebook.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O facebook deve possuir no máximo 500 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-6">
+                                    <label>LinkedIn:</label>
+                                    <input ng-model="fornecedor.contato.linkedIn" class="form-control" name="linkedIn" type="url" placeholder="LinkedIn do fornecedor" ng-maxlength="500" />
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.linkedIn.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O linkedin deve possuir no máximo 500 caracteres!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-12">
+                                    <label>Observação</label>
+                                    <textarea ng-model="fornecedor.contato.observacao" class="form-control" name="observacao" rows="6" placeholder="Observações sobre o fornecedor" ng-maxlength="8000"></textarea>
+                                    <div ng-show="formFornecedor.$submitted && formFornecedor.observacao.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A observação deve possuir no máximo 8000 caracteres!
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            &nbsp;Salvar
+                        </button>
+                        &nbsp;
+                        <a href="" ng-click="voltarPagina()" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            &nbsp;Cancelar
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <div class="loader" ng-hide="!loading">
+                                    <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('#cnpj').mask('99.999.999/9999-99');
+    $('#cepFornecedor').mask('99.999-999');
+    $('#telefone1Fornecedor').mask('(99)9999-9999');
+    $('#telefone2Fornecedor').mask('(99)9999-9999');
+</script>

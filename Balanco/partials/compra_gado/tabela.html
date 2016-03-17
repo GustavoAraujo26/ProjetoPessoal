@@ -1,0 +1,42 @@
+﻿<div class="loader" ng-hide="!carregandoTabela">
+    <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table id="tableProdutor" class="table table-responsive table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th><b>Id</b></th>
+                            <th><b>Data</b></th>
+                            <th><b>Valor</b></th>
+                            <th><b>Qtd.</b></th>
+                            <th><b>Ações</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="compra in compras | filter: filtro | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+                            <td>{{compra.id}}</td>
+                            <td>{{compra.data | date: 'dd/MM/yyyy'}}</td>
+                            <td>{{compra.valor | currency}}</td>
+                            <td>{{compra.quantidadeCabecas}}</td>
+                            <td>
+                                <a href="/compragado/detalhes/{{compra.id}}" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    &nbsp;Detalhar
+                                </a>
+                                &nbsp;
+                                <a ng-click="removerCompra(compra)" href="" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                    &nbsp;Apagar
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <uib-pagination total-items="compras.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>
+            </div>
+        </div>
+    </div>
+</div>

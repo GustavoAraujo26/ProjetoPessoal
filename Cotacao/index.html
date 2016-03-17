@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" ng-app="cotacao">
+<head>
+    <meta charset="UTF-8" />
+    <base href="/"/>
+    <meta name=viewport content="width=device-width">
+    <title>Portfólio - Cotação de Produtos</title>
+    <!--Importando os arquivos de estilo do web app-->
+    <link href="css/reset/reset.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/website/custom-styles.css" rel="stylesheet"/>
+    <!--Importando os arquivos javascript da aplicação-->
+    <script src="js/jquery/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/jquery/jquery.mask.min.js"></script>
+    <script src="js/angular/lib/angular.min.js"></script>
+    <script src="js/angular/lib/angular-route.min.js"></script>
+    <script src="js/angular/lib/angular-resource.min.js"></script>
+    <script src="js/angular/lib/angular-animate.min.js"></script>
+    <script src="js/angular/lib/angular-cookies.min.js"></script>
+    <script src="js/angular/lib/ui-bootstrap-tpls-1.2.4.min.js"></script>
+    <!--Importando os arquivos customizados do angular-->
+    <script src="js/angular/main.js"></script>
+    <!--Importando os controllers do angular-->
+    <script src="js/angular/controllers/home-controller.js"></script>
+    <script src="js/angular/controllers/produto-controller.js"></script>
+    <script src="js/angular/controllers/fornecedor-controller.js"></script>
+    <script src="js/angular/controllers/representante-controller.js"></script>
+    <script src="js/angular/controllers/cotacao-controller.js"></script>
+    <!--Importando os serviços do angular-->
+    <script src="js/angular/services/servico-produto.js"></script>
+    <script src="js/angular/services/servico-fornecedor.js"></script>
+    <script src="js/angular/services/servico-representante.js"></script>
+    <script src="js/angular/services/servico-cotacao.js"></script>
+</head>
+<body>
+    <header ng-include src="'partials/nav/nav-home.html'"></header>
+    <main>
+        <ng-view></ng-view>
+    </main>
+    <footer ng-include src="'partials/footer/footer.html'"></footer>
+    <script>
+        $(document).on('click', '.navbar-collapse.in', function (e) {
+            if ($(e.target).is('a')) {
+                $(this).collapse('hide');
+            }
+        });
+        $(document).on('click', '.navbar-header', function (e) {
+            if ($(e.target).is('a')) {
+                $('#menu-collapsed').collapse('hide');
+            }
+        });
+    </script>
+</body>
+</html>

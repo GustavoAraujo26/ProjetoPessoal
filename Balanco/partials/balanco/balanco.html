@@ -1,0 +1,107 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="jumbotron jumb-titulo">
+            <h2 class="text-center">
+                <span class="glyphicon glyphicon-scale"></span>
+                &nbsp; Balanço Fiscal
+            </h2>
+            <p class="text-center">Seja bem vindo ao balanço fiscal!</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="thumbnail container-painel-home">
+            <p class="text-center">
+                Aqui nesta página você encontrará um relatório geral a respeito das receitas e despesas do produtor
+                rural selecionado.
+            </p>
+            <p class="text-center">
+                para visualizá-las utilize o formulário abaixo para executar a filtragem das informações. Basta preencher
+                o ID do produtor e o ano.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <form novalidate name="formBalanco" ng-submit="verBalanco(produtor, ano)">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <fieldset>
+                        <legend>Filtragem de Informações</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>ID do Produtor:</label>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="buscaProp()" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                    <input ng-model="produtor" class="form-control" name="produtor" type="text" placeholder="Produtor Rural" value="produtor" required/>
+                                </div>
+                                <div ng-show="formBalanco.$submitted && formBalanco.produtor.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor escolha um produtor rural!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>Ano:</label>
+                                <input ng-model="ano" class="form-control" name="ano" type="number" placeholder="Ano" required/>
+                                <div ng-show="formBalanco.$submitted && formBalanco.ano.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o ano!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="loader" ng-hide="!carregandoTabela">
+                        <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-filter"></span>
+                        &nbsp;Filtrar
+                    </button>
+                </div>
+            </div>
+        </form> 
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-produtor.html'"></div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-fazenda.html'"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-compra-gado.html'"></div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-venda-gado.html'"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-despesa.html'"></div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-receita.html'"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-leite.html'"></div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+        <div ng-include src="'partials/balanco/painel-posse.html'"></div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div ng-include src="'partials/balanco/painel-resultado.html'"></div>
+    </div>
+</div>

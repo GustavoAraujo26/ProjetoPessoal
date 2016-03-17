@@ -1,0 +1,39 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="jumbotron jumb-titulo">
+            <h2 class="text-center">
+                <span class="glyphicon glyphicon-euro"></span>
+                Cadastro de Despesas Gerais
+            </h2>
+            <p class="text-center">Listagem de todas as despesas registradas no sistema.</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="thumbnail container-painel-home">
+            <p class="text-center">Seja bem vindo a área de listagem das despesas gerais!</p>
+            <p class="text-center">
+                Aqui nesta página você encontrará todas as despesas gerais registradas no sistema! Nela também é possível
+                efetuar uma pesquisa através do campo com o ícone <span class="glyphicon glyphicon-search"></span>.
+            </p>
+            <p class="text-center">
+                Caso deseje visualizar os detalhes de alguma despesas específico ou editar suas informações basta
+                clicar em <i>"Detalhes"</i>. Caso deseje apagar do sistema uma despesa específica basta clicar em <i>"Deletar"</i>.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div id="procura-produtor" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                    <input ng-model="filtro" class="form-control" name="pesquisaProdutor" type="text" placeholder="Digite aqui o item a ser pesquisado."/>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div ng-include src="'partials/despesa/tabela.html'"></div>

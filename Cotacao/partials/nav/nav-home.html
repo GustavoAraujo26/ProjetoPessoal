@@ -1,0 +1,65 @@
+﻿<!--Criando o menu através do bootstrap-->
+<nav class="navbar navbar-fixed-top navbar-inverse">
+    <!--Criando o cabeçalho da barra de navegação-->
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand">
+            <span class="glyphicon glyphicon-shopping-cart"></span>
+            Cotação
+        </a>
+        <button class="navbar-toggle collapsed" type="button" data-target="#menu-collapsed" data-toggle="collapse">
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar botao-menu-responsivo"></span>
+            <span class="icon-bar botao-menu-responsivo"></span>
+            <span class="icon-bar botao-menu-responsivo"></span>
+        </button>
+    </div>
+    <div class="collapse navbar-collapse" id="menu-collapsed">
+        <ul class="nav navbar-nav">
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">
+                    Cotação&nbsp;<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/cotacao">Home</a></li>
+                    <li><a href="/cotacao/oferta/novo">Cadastrar</a></li>
+                    <li><a href="/cotacao/oferta/pesquisa">Pesquisa</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">
+                    Fornecedor&nbsp;<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/fornecedor">Home</a></li>
+                    <li><a href="/fornecedor/novo">Cadastrar</a></li>
+                    <li><a href="/fornecedor/pesquisa">Pesquisar</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">
+                    Produto&nbsp;<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/produto">Home</a></li>
+                    <li><a href="/produto/novo">Cadastrar</a></li>
+                    <li><a href="/produto/pesquisa">Pesquisar</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                   aria-expanded="false">
+                    Representante&nbsp;<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="/representante">Home</a></li>
+                    <li><a href="/representante/novo">Cadastrar</a></li>
+                    <li><a href="/representante/pesquisa">Pesquisar</a></li>
+                </ul>
+            </li>
+            <li><a href="http://gustavodearaujo.com/">Retornar ao Portfólio</a></li>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{057683CE-A58A-4E1F-B49A-86F328211B9A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoPessoal.Application</RootNamespace>
+    <AssemblyName>ProjetoPessoal.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfaces\Agenda\IAtividadeAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\ICompraGadoAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\IDespesaGeralAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\IFazendaAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\IPosseAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\IProdutorRuralAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\IReceitaGeralAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\IVendaGadoAppService.cs" />
+    <Compile Include="Interfaces\BalancoProdutorRural\IVendaLeiteAppService.cs" />
+    <Compile Include="Interfaces\Contato\IContatoProfissionalAppService.cs" />
+    <Compile Include="Interfaces\Cotacao\ICotacaoAppService.cs" />
+    <Compile Include="Interfaces\Cotacao\IFornecedorAppService.cs" />
+    <Compile Include="Interfaces\Cotacao\IProdutoAppService.cs" />
+    <Compile Include="Interfaces\Cotacao\IRepresentanteAppService.cs" />
+    <Compile Include="Interfaces\IAppServiceBase.cs" />
+    <Compile Include="Interfaces\ListaTelefonica\IContatoTelefonicoAppService.cs" />
+    <Compile Include="Interfaces\LivroCaixa\ICreditoCaixaAppService.cs" />
+    <Compile Include="Interfaces\LivroCaixa\IDebitoCaixaAppService.cs" />
+    <Compile Include="Interfaces\Perfil\IPerfilAppService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Agenda\AtividadeAppService.cs" />
+    <Compile Include="Services\AppServiceBase.cs" />
+    <Compile Include="Services\BalancoProdutorRural\CompraGadoAppService.cs" />
+    <Compile Include="Services\BalancoProdutorRural\DespesaGeralAppService.cs" />
+    <Compile Include="Services\BalancoProdutorRural\FazendaAppService.cs" />
+    <Compile Include="Services\BalancoProdutorRural\PosseAppService.cs" />
+    <Compile Include="Services\BalancoProdutorRural\ProdutorRuralAppService.cs" />
+    <Compile Include="Services\BalancoProdutorRural\ReceitaGeralAppService.cs" />
+    <Compile Include="Services\BalancoProdutorRural\VendaGadoAppService.cs" />
+    <Compile Include="Services\BalancoProdutorRural\VendaLeiteAppService.cs" />
+    <Compile Include="Services\Contato\ContatoProfissionalAppService.cs" />
+    <Compile Include="Services\Cotacao\CotacaoAppService.cs" />
+    <Compile Include="Services\Cotacao\FornecedorAppService.cs" />
+    <Compile Include="Services\Cotacao\ProdutoAppService.cs" />
+    <Compile Include="Services\Cotacao\RepresentanteAppService.cs" />
+    <Compile Include="Services\ListaTelefonica\ContatoTelefonicoAppService.cs" />
+    <Compile Include="Services\LivroCaixa\CreditoCaixaAppService.cs" />
+    <Compile Include="Services\LivroCaixa\DebitoCaixaAppService.cs" />
+    <Compile Include="Services\Perfil\PerfilAppService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoPessoal.Domain\ProjetoPessoal.Domain.csproj">
+      <Project>{34ac5306-c14f-4087-8fa3-641fae830cfd}</Project>
+      <Name>ProjetoPessoal.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoPessoal.Services\ProjetoPessoal.Services.csproj">
+      <Project>{ed3d7fb9-0653-49f5-bae8-3db0f35d1c31}</Project>
+      <Name>ProjetoPessoal.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

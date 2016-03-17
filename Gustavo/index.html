@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" ng-app="gustavo">
+	<head>
+		<title>Gustavo de Araujo Oliveira - Desenvolvedor .NET - Home Page</title>
+	    <meta charset="utf-8">
+	    <base href="/"/>
+		<meta name=viewport content="width=device-width">
+        <link href="css/reset/reset.css" rel="stylesheet">
+        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
+	    <link href="css/wow/animate.css" rel="stylesheet">
+	    <link href="css/website/custom-styles.css" rel="stylesheet"/>
+	</head>
+	<body>
+        <header ng-include src="'partials/nav/nav-home.html'"></header>
+	    <ng-view></ng-view>
+	    <footer id="contato" ng-include src="'partials/footer/footer.html'"></footer>
+        <!--Scripts-->
+        <script src="js/jquery/jquery-2.2.0.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/jquery/jquery.mask.min.js"></script>
+        <script src="js/wow/wow.min.js"></script>
+        <script src="js/angular/lib/angular.min.js"></script>
+        <script src="js/angular/lib/angular-route.min.js"></script>
+        <script src="js/angular/lib/angular-resource.min.js"></script>
+        <script src="js/angular/lib/angular-cookies.min.js"></script>
+        <script src="js/angular/lib/angular-animate.min.js"></script>
+        <script src="js/angular/lib/ui-bootstrap-tpls-1.2.4.min.js"></script>
+        <script src="js/angular/main.js"></script>
+        <script src="js/angular/controllers/home-controller.js"></script>
+	    <script>
+            new WOW().init();
+            $(document).on('click', '.navbar-collapse.in', function (e) {
+                if ($(e.target).is('a')) {
+                    $(this).collapse('hide');
+                }
+            });
+	    </script>
+	</body>
+</html>

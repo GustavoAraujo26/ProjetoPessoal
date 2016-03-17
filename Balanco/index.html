@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br" ng-app="balanco">
+<head>
+    <meta charset="UTF-8" />
+    <base href="/"/>
+    <meta name=viewport content="width=device-width">
+    <title>Portfólio - Balanço Fiscal para Produtor Rural</title>
+    <!--Importando os arquivos de estilo do web app-->
+    <link href="css/reset/reset.css" rel="stylesheet" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/website/custom-styles.css" rel="stylesheet"/>
+    <!--Importando os arquivos javascript da aplicação-->
+    <script src="js/jquery/jquery-2.2.0.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/jquery/jquery.mask.min.js"></script>
+    <script src="js/angular/lib/angular.min.js"></script>
+    <script src="js/angular/lib/angular-route.min.js"></script>
+    <script src="js/angular/lib/angular-resource.min.js"></script>
+    <script src="js/angular/lib/angular-animate.min.js"></script>
+    <script src="js/angular/lib/angular-cookies.min.js"></script>
+    <script src="js/angular/lib/ui-bootstrap-tpls-1.2.4.min.js"></script>
+    <!--Importando os arquivos customizados do angular-->
+    <script src="js/angular/main.js"></script>
+    <script src="js/angular/controllers/balanco-controller.js"></script>
+    <script src="js/angular/controllers/compra-gado-controller.js"></script>
+    <script src="js/angular/controllers/despesa-controller.js"></script>
+    <script src="js/angular/controllers/fazenda-controller.js"></script>
+    <script src="js/angular/controllers/home-controller.js"></script>
+    <script src="js/angular/controllers/posse-controller.js"></script>
+    <script src="js/angular/controllers/produtor-rural-controller.js"></script>
+    <script src="js/angular/controllers/receita-controller.js"></script>
+    <script src="js/angular/controllers/venda-gado-controller.js"></script>
+    <script src="js/angular/controllers/leite-controller.js"></script>
+    <!--Importando os scripts de serviço-->
+    <script src="js/angular/services/servicos-produtor.js"></script>
+    <script src="js/angular/services/servicos-fazenda.js"></script>
+    <script src="js/angular/services/servicos-posse.js"></script>
+    <script src="js/angular/services/servicos-leite.js"></script>
+    <script src="js/angular/services/servicos-despesa.js"></script>
+    <script src="js/angular/services/servicos-receita.js"></script>
+    <script src="js/angular/services/servicos-compra-gado.js"></script>
+    <script src="js/angular/services/servicos-venda-gado.js"></script>
+</head>
+<body>
+    <header ng-include src="'partials/nav/nav-home.html'"></header>
+    <main>
+        <div class="container-fluid banner-aplicacao wow fadeInDown">
+            <div class="row">
+                <div class="col-xs-12 col-md-offset-3 col-md-6">
+                    <h1 id="tituloPagina" class="text-center">
+                        <span class="glyphicon glyphicon-grain"></span>
+                        Balanço Fiscal - Produtor Rural
+                    </h1>
+                    <p class="text-center">Controle as finanças do produtor rural para auxiliar no imposto de renda!</p>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid corpo-aplicacao">
+            <div class="row">
+                <div class="col-xs-12 col-md-9">
+                    <ng-view></ng-view>
+                </div>
+                <div class="col-xs-12 col-md-3">
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Os mais acessados</h3>
+                        </div>
+                        <div class="list-group">
+                            <a href="/balanco" class="list-group-item">Balanço Fiscal</a>
+                            <a href="/produtor/novo" class="list-group-item">Cadastrar Produtor</a>
+                            <a href="/fazenda/novo" class="list-group-item">Cadastrar Fazenda</a>
+                            <a href="/posse/novo" class="list-group-item">Registrar Posse</a>
+                            <a href="/despesa/novo" class="list-group-item">Registrar Despesa</a>
+                            <a href="/receita/novo" class="list-group-item">Registrar Receita</a>
+                            <a href="/compragado/novo" class="list-group-item">Registrar Compra de Gado</a>
+                            <a href="/vendagado/novo" class="list-group-item">Registrar Venda de Gado</a>
+                            <a href="/leite/novo" class="list-group-item">Regsitrar Venda de Leite</a>
+                        </div>
+                    </div>
+                    <div class="panel panel-success">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Demais opções</h3>
+                        </div>
+                        <div class="list-group">
+                            <a href="http://gustavodearaujo.com/" class="list-group-item" target="_blank">Retornar ao Site</a>
+                            <a href="http://medico.gustavodearaujo.com/" class="list-group-item" target="_blank">Portfólio - Agendamento Médico</a>
+                            <a href="http://arquivo.gustavodearaujo.com/" class="list-group-item" target="_blank">Portfólio - Controle de Arquivo</a>
+                            <a href="http://cotacao.gustavodearaujo.com/" class="list-group-item" target="_blank">Portfólio - Cotação de Produtos</a>
+                            <a href="http://rh.gustavodearaujo.com/" class="list-group-item" target="_blank">Portfólio - Controle de RH</a>
+                            <a href="http://restaurante.gustavodearaujo.com/" class="list-group-item" target="_blank">Portfólio - Restaurante</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer ng-include src="'partials/footer/footer.html'"></footer>
+    <script>
+        $(document).on('click', '.navbar-collapse.in', function (e) {
+            if ($(e.target).is('a')) {
+                $(this).collapse('hide');
+            }
+        });
+        $(document).on('click', '.navbar-header', function (e) {
+            if ($(e.target).is('a')) {
+                $('#menu-collapsed').collapse('hide');
+            }
+        });
+    </script>
+</body>
+</html>

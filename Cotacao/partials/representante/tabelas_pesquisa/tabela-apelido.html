@@ -1,0 +1,40 @@
+﻿<div class="loader" ng-hide="!carregandoTabela">
+    <img src="../../../imagens/icones/ajax-loader.gif" class="loader" />
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table table-responsive table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th><b>Id</b></th>
+                            <th><b>Apelido</b></th>
+                            <th><b>Telefone</b></th>
+                            <th><b>Ações</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="representante in representantes | filter: filtro | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+                            <td>{{representante.id}}</td>
+                            <td>{{representante.apelido}}</td>
+                            <td>{{representante.contato.telefone1}}</td>
+                            <td>
+                                <a href="/representante/detalhes/{{representante.id}}" class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-list-alt"></span>
+                                    &nbsp;Detalhar
+                                </a>
+                                &nbsp;
+                                <a ng-click="removerRepresentante(representante)" href="" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-trash"></span>
+                                    &nbsp;Apagar
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <uib-pagination total-items="representantes.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="jumbotron banner-header">
+                <h2 class="page-header">
+                    <span class="glyphicon glyphicon-flag"></span>
+                    &nbsp; {{fornecedor.razaoSocial}}
+                </h2>
+                <p>Informações Detalhadas do Fornecedor</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="thumbnail texto-explicativo">
+                <p class="text-center">
+                    Aqui nesta página você encontrará todas as informações registradas no sistema referente ao
+                    fornecedor selecionado.
+                </p>
+                <p class="text-center">
+                    Caso deseje alterar alguma informação basta clicar no botão <i>"Editar"</i>. Caso deseje retornar
+                    para a página de listagem dos fornecedores basta clicar em <i>"Cancelar"</i>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="text-center panel-title">Informações Pessoais</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <ul class="nav nav-tabs">
+                                <li role="presentation" class="active"><a href="" data-target="#tabHome" data-toggle="tab">Informações Iniciais</a></li>
+                                <li role="presentation"><a href="" data-target="#tabEndereco" data-toggle="tab">Endereço</a></li>
+                                <li role="presentation"><a href="" data-target="#tabContato" data-toggle="tab">Contato</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade in active" id="tabHome">
+                                    <table class="table table-responsive table-striped table-hover">
+                                        <tr>
+                                            <td>Razão Social:</td>
+                                            <td><strong>{{fornecedor.razaoSocial}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CNPJ:</td>
+                                            <td><strong>{{fornecedor.cnpj}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Inscrição Estadual:</td>
+                                            <td><strong>{{fornecedor.inscricaoEstadual}}</strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="tabEndereco">
+                                    <table class="table table-responsive table-striped table-hover">
+                                        <tr>
+                                            <td>Logradouro:</td>
+                                            <td><strong>{{fornecedor.endereco.logradouro}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Número:</td>
+                                            <td><strong>{{fornecedor.endereco.numero}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Complemento:</td>
+                                            <td><strong>{{fornecedor.endereco.complemento}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bairro:</td>
+                                            <td><strong>{{fornecedor.endereco.bairro}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cidade:</td>
+                                            <td><strong>{{fornecedor.endereco.cidade}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Estado:</td>
+                                            <td><strong>{{fornecedor.endereco.estado}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>CEP:</td>
+                                            <td><strong>{{fornecedor.endereco.cep}}</strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="tab-pane fade" id="tabContato">
+                                    <table class="table table-responsive table-striped table-hover">
+                                        <tr>
+                                            <td>E-mail:</td>
+                                            <td><strong>{{fornecedor.contato.email}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Telefone 1:</td>
+                                            <td><strong>{{fornecedor.contato.telefone1}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Telefone 2:</td>
+                                            <td><strong>{{fornecedor.contato.telefone2}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>LinkedIn:</td>
+                                            <td><strong>{{fornecedor.contato.linkedIn}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Facebook:</td>
+                                            <td><strong>{{fornecedor.contato.facebook}}</strong></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Observação:</td>
+                                            <td><strong>{{fornecedor.contato.observacao}}</strong></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="/fornecedor/edit/{{fornecedor.id}}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        &nbsp;Editar
+                    </a>
+                    <a href="/fornecedor" class="btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        &nbsp;Cancelar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

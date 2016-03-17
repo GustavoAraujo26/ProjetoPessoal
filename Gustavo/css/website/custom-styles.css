@@ -1,0 +1,484 @@
+﻿/* ----------- Estilos de Banners ------------- */
+/* ---- Estilo do banner - Competencia -------- */
+.banner-competencia {
+    background-image: url('../../imagens/banners/banner_competencia.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/* ---- Estilo do banner - Experiencia -------- */
+.banner-experiencia {
+    background-image: url('../../imagens/banners/banner_experiencia.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/* ---- Estilo do banner - contato -------- */
+.banner-contato {
+    background-image: url('../../imagens/banners/banner_login.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/* ---- Estilo do banner - Formacao -------- */
+.banner-formacao {
+    background-image: url('../../imagens/banners/banner_formacao.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/* ---- Estilo do banner - Login -------- */
+.banner-login {
+    background-image: url('../../imagens/banners/banner_login.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/* ---- Estilo do banner - Portfólio -------- */
+.banner-portfolio {
+    background-image: url('../../imagens/banners/banner_portfolio.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/* ---- Estilo do banner - Sobre Mim -------- */
+.banner-sobre-mim {
+    background-image: url('../../imagens/banners/banner_sobre_mim.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    margin-top: 50px;
+    padding: 50px 50px;
+}
+/* ------------ Estilos dos Containers ------------- */
+/* ---- Estilo dos containers - Competencia -------- */
+#container-competencia-1 {
+    background-color: #231f1f;
+    color: #fff;
+}
+#container-competencia-2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+/* -------- Estilo dos Paineis - Competencia --------- */
+.painel-competencia {
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #706c6c;
+    color: #fff;
+}
+.painel-competencia-cabecalho {
+    background-color: #252020;
+    border-bottom: solid 1px #fff;
+    padding: 10px 10px;
+    color: #fff;
+    height: 50px;
+}
+.painel-competencia-rodape {
+    background-color: #252020;
+    border-radius: 0;
+    padding: 10px 10px;
+    color: #fff;
+    height: 55px;
+}
+/* -------- Estilo das barras de progresso - Competencia --------- */
+.pg-dev-soft {
+    width: 90%;
+}
+.pg-design-patterns {
+    width: 60%;
+}
+.pg-angular {
+    width: 70%;
+}
+.pg-tdd {
+    width: 40%;
+}
+.pg-asp-net-web-api {
+    width: 85%;
+}
+.pg-html {
+    width: 80%;
+}
+/* ---- Estilo dos containers - Experiencia -------- */
+#container-experiencia-1 {
+    background-color: #113946;
+    color: #fff;
+    padding-bottom: 20px;
+}
+#container-experiencia-2 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+/* -------- Estilo dos Paineis - Experiencia --------- */
+.painel-experiencia {
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #113946;
+    color: #fff;
+}
+.painel-experiencia-cabecalho {
+    background-color: #234b59;
+    border-bottom: solid 1px #fff;
+    padding: 10px 10px;
+    color: #fff;
+    height: 50px;
+}
+/* ---- Estilo do banner de depoimentos - Experiencia -------- */
+.depoimento-experiencia {
+    background-image: url('../../imagens/banners/banner_experiencia.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    padding: 50px 50px;
+}
+/* ---- Estilo dos containers - Formacao -------- */
+#container-formacao-1 {
+    background-color: #2e5b3c;
+    color: #fff;
+    padding-bottom: 20px;
+}
+#container-formacao-2 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+/* -------- Estilo dos Paineis - Formacao --------- */
+.painel-formacao {
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #2e5b3c;
+    color: #fff;
+}
+.painel-formacao-cabecalho {
+    background-color: #447c55;
+    border-bottom: solid 1px #fff;
+    padding: 10px 10px;
+    color: #fff;
+    height: 70px;
+}
+/* ---- Estilo do banner de depoimentos - Formacao -------- */
+.depoimento-formacao {
+    background-image: url('../../imagens/banners/banner_formacao.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    padding: 50px 50px;
+}
+/* ---- Estilo dos containers - Home -------- */
+#container-home-1 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+#container-home-2 {
+    background-image: url('../../imagens/banners/banner_home.jpg');
+    background-attachment: fixed;
+    color: #fff;
+}
+#container-home-3 {
+    background-color: #a6333d;
+    color: #fff;
+}
+/* -------- Estilo dos Paineis - Home --------- */
+.painel-home {
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 5px solid #0fcda6;
+}
+.painel-home-cabecalho {
+    background: #0fcda6;
+    padding: 10px 10px;
+    color: #fff;
+    height: 50px;
+}
+/*----- Estilo dos ícones de link - Home ------ */
+.icone-1 {
+    -ms-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    background: #0fcda6;
+    padding: 20px 20px;
+    color: #fff;
+}
+.icone-1:hover {
+    background-color: #48484d;
+    color: #fff;
+}
+.icone-2 {
+    -ms-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    background: #0fcda6;
+    padding: 20px 20px;
+    color: #fff;
+}
+.icone-2:hover {
+    background-color: #fff;
+    color: #0fcda6;
+}
+.icone-3 {
+    -ms-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    background: #48484d;
+    padding-top: 20px;
+    padding-left: 25px;
+    color: #fff;
+}
+.icone-3:hover {
+    background-color: #fff;
+    color: #48484d;
+}
+.img-container-3 {
+    height: 250px;
+    width: 200px;
+    margin-top: 18px;
+}
+/* ---- Estilo dos containers - Login -------- */
+#container-login-1 {
+    margin-top: 20px;
+}
+#container-login-2 {
+    background-color: #594342;
+    color: #fff;
+    padding: 20px 20px;
+}
+/* -------- Estilo dos Paineis - Login --------- */
+.painel-login {
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 5px solid #594342;
+    border-top: 5px solid #594342;
+}
+.botoes-nav-login {
+    margin-top: 6px;
+}
+/* ---- Estilo dos containers - Portfolio -------- */
+#container-portfolio-1 {
+    background-color: #622328;
+    color: #fff;
+}
+#container-portfolio-2 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+}
+/* -------- Estilo dos Paineis - Portfolio --------- */
+.painel-portfolio {
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    background-color: #706c6c;
+    color: #fff;
+}
+.painel-portfolio-cabecalho {
+    background-color: #252020;
+    border-bottom: solid 1px #fff;
+    padding: 10px 10px;
+    color: #fff;
+    height: 50px;
+}
+.painel-portfolio-rodape {
+    background-color: #252020;
+    border-radius: 0;
+    padding: 10px 10px;
+    color: #fff;
+    height: 55px;
+}
+/* ---- Estilo do banner de depoimentos - Portfólio -------- */
+.depoimento-portfolio {
+    background-image: url('../../imagens/banners/banner_portfolio.jpg');
+    background-attachment: fixed;
+    color: #fff;
+    padding: 50px 50px;
+}
+/* ---- Estilo dos containers - Sobre Mim -------- */
+#container-sobremim-1 {
+    margin: 30px 30px;
+}
+#container-sobremim-2 {
+    background-color: #1c1b5a;
+    color: #fff;
+}
+#container-sobremim-3 {
+    background-color: #7f2f36;
+    color: #fff;
+}
+/* -------- Estilo dos Paineis - Sobre Mim --------- */
+.paineis-sobremim-cidades {
+    margin-top: 14%;
+}
+.painel-cidade {
+    -ms-border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    background-color: #1c1b5a;
+    color: #fff;
+    padding: 0;
+}
+.img-sobre-mim-1 {
+    width: 230px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.img-sobre-mim-2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+/* ------------ Estilos da barra de navegação ------------- */
+/* --------- Estilos do menu ---------- */
+#barraNavegacao {
+    border-color: transparent;
+}
+#barraNavegacao .navbar-brand span, strong {
+	font-size: 20px;
+}
+#barraNavegacao .navbar-brand span {
+	font-size: 20px;
+    color: #C00;
+}
+#barraNavegacao .navbar-header button {
+	border-color: transparent;
+}
+#menu-collapsed li a {
+    font-size: 18px;
+}
+#menu-collapsed li:hover {
+    background-color: #080808;
+}
+ul.nav.navbar-nav li a:hover {
+    border-bottom: 5px solid #C00;
+}
+/* ------------ Estilos do rodapé da página ------------- */
+/* --------- Estilo dos containers - Rodapé ---------- */
+.rodape {
+    background-color: #48484d;
+    color: #fff;
+    padding: 20px 0;
+}
+.rodape-nome {
+    background-color: #0fcda6;
+    text-align: center;
+    color: #fff;
+    padding: 5px 0;
+    margin-bottom: -15px;
+}
+/* --------- Estilo do conteúdo containers - Rodapé ---------- */
+.contato-texto {
+    font-size: 18px;
+}
+.contato-titulo {
+    font-size: 35px;
+    font-weight: bolder;
+}
+.icone-contato {
+    font-size: 25px;
+    padding-left: 7px;
+}
+.link-contato-texto {
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+}
+.link-contato-texto:hover {
+    color: #0fcda6;
+    text-decoration: none;
+}
+/* --------- Estilo do cabeçalho do formulário - Rodapé ---------- */
+.legend-contato {
+    font-size: 30px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+}
+/* ------------ Estilos slide de apresentação - Home ------------- */
+/* ------ Estilo do slide - Home --------- */
+.fullscreen {
+	width: 100%;
+	padding-top: 50px;
+}
+/* ---- Estilo dos paineis compartilhados -------- */
+.corpo-painel {
+    padding-top: 30px;
+}
+.texto-painel {
+    padding: 10px;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.titulo-painel {
+    font-size: 20px;
+}
+.img-painel {
+    width: 100%;
+    height: 200px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+/* ---- Estilo dos containers compartilhados -------- */
+.container-texto {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.alerta-de-erro {
+    font-size: 15px;
+    margin: 10px 10px;
+}
+.alerta-de-sucesso {
+    font-size: 25px;
+    margin: 10px 10px;
+}
+.container-contato {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#botaoEnviar {
+    display: inline;
+}
+.loader {
+    display: inline;
+}

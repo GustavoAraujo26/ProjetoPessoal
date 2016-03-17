@@ -1,0 +1,108 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="jumbotron banner-header">
+                <h2 class="page-header">
+                    <span class="glyphicon glyphicon-phone"></span>
+                    &nbsp; Formulário de Produtos
+                </h2>
+                <p>Seja bem vindo ao formulário de informações do produto!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="thumbnail texto-explicativo">
+                <p class="text-center">
+                    Aqui nesta página você encontrará um cadastro com informações importantes a serem preenchidas. Preencha
+                    todos os campos, a fim de deixar o cadastro completo.
+                </p>
+                <p class="text-center">
+                    Quando tiver preenchido todas as informações basta clicar em <i>"Salvar"</i>. Caso deseje retornar
+                    para a página de listagem dos produtos basta clicar em <i>"Cancelar"</i>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form novalidate name="formProduto" ng-submit="submeterProduto()">
+                        <fieldset>
+                            <legend>Informações Iniciais</legend>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-6">
+                                    <label>Nome:</label>
+                                    <input ng-model="produto.nome" class="form-control" name="nome" type="text" placeholder="Nome do produto" required ng-minlength="3" ng-maxlength="300" />
+                                    <div ng-show="formProduto.$submitted && formProduto.nome.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha o nome do produto!
+                                    </div>
+                                    <div ng-show="formProduto.$submitted && formProduto.nome.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O nome deve possuir no máximo 300 caracteres!
+                                    </div>
+                                    <div ng-show="formProdutor.$submitted && formProdutor.nome.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;O nome deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+                                <div class="form-group col-xs-12 col-md-6">
+                                    <label>Marca:</label>
+                                    <input ng-model="produto.marca" class="form-control" name="marca" type="text" placeholder="Marca do produto" required ng-minlength="3" ng-maxlength="300" />
+                                    <div ng-show="formProduto.$submitted && formProduto.marca.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;Por favor preencha a marca do produto!
+                                    </div>
+                                    <div ng-show="formProduto.$submitted && formProduto.nome.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A marca deve possuir no máximo 300 caracteres!
+                                    </div>
+                                    <div ng-show="formProdutor.$submitted && formProdutor.nome.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;a marca deve possuir no mínimo 3 caracteres!
+                                    </div>
+                                </div>
+
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Demais Informações</legend>
+                            <div class="row">
+                                <div class="form-group col-xs-12 col-md-12">
+                                    <label>Observação</label>
+                                    <textarea ng-model="produto.observacao" class="form-control" name="observacao" rows="6" placeholder="Observações sobre o produto" ng-minlength="3" ng-maxlength="8000"></textarea>
+                                    <div ng-show="formProduto.$submitted && formProduto.observacao.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                        <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                        &nbsp;A observação deve possuir no máximo 8000 caracteres!
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="glyphicon glyphicon-ok"></span>
+                            &nbsp;Salvar
+                        </button>
+                        &nbsp;
+                        <a href="" ng-click="voltarPagina()" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span>
+                            &nbsp;Cancelar
+                        </a>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-12">
+                                <div class="loader" ng-hide="!loading">
+                                    <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

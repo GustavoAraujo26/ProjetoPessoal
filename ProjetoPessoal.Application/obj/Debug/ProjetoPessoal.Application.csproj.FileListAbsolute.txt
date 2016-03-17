@@ -1,0 +1,9 @@
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\bin\Debug\ProjetoPessoal.Application.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\bin\Debug\ProjetoPessoal.Application.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\bin\Debug\ProjetoPessoal.Domain.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\bin\Debug\ProjetoPessoal.Services.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\bin\Debug\ProjetoPessoal.Domain.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\bin\Debug\ProjetoPessoal.Services.pdb
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\obj\Debug\ProjetoPessoal.Application.csprojResolveAssemblyReference.cache
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\obj\Debug\ProjetoPessoal.Application.dll
+D:\Desenvolvimento\Projeto Pessoal\Projeto Pessoal\ProjetoPessoal\ProjetoPessoal.Application\obj\Debug\ProjetoPessoal.Application.pdb

@@ -1,0 +1,30 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="text-center panel-title">
+            <span class="glyphicon glyphicon-tree-deciduous"></span>
+            &nbsp;<b>Fazendas</b>
+        </h3>
+    </div>
+    <div class="panel-body">
+        <div class="loader" ng-hide="!carregandoTabela">
+            <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+        </div>
+        <table class="table table-responsive table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Nome:</th>
+                    <th>Cidade:</th>
+                    <th>Estado:</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="fazenda in produtorSelecionado.fazendas | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize"">
+                    <td>{{fazenda.nome}}</td>
+                    <td>{{fazenda.endereco.cidade}}</td>
+                    <td>{{fazenda.endereco.estado}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <uib-pagination total-items="produtorSelecionado.fazendas.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>
+    </div>
+</div>

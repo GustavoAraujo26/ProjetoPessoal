@@ -1,0 +1,74 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="jumbotron banner-header">
+                <h2 class="page-header">
+                    <span class="glyphicon glyphicon-phone"></span>
+                    &nbsp; {{produto.nome}}
+                </h2>
+                <p>Informações Detalhadas do Produto</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="thumbnail texto-explicativo">
+                <p class="text-center">
+                    Aqui nesta página você encontrará todas as informações registradas no sistema referente ao
+                    produto selecionado.
+                </p>
+                <p class="text-center">
+                    Caso deseje alterar alguma informação basta clicar no botão <i>"Editar"</i>. Caso deseje retornar
+                    para a página de listagem dos produtos basta clicar em <i>"Cancelar"</i>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="text-center panel-title">Informações Pessoais</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <table class="table table-responsive table-striped table-hover">
+                                <tr>
+                                    <td>ID:</td>
+                                    <td><strong>{{produto.id}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Nome:</td>
+                                    <td><strong>{{produto.nome}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Marca:</td>
+                                    <td><strong>{{produto.marca}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Observação:</td>
+                                    <td><strong>{{produto.observacao}}</strong></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="/produto/edit/{{produto.id}}" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        &nbsp;Editar
+                    </a>
+                    <a href="/produto" class="btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        &nbsp;Cancelar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

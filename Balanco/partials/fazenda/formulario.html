@@ -1,0 +1,228 @@
+﻿<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="jumbotron jumb-titulo">
+            <h2 class="text-center">
+                <span class="glyphicon glyphicon-tree-deciduous"></span>
+                &nbsp; Formulário de Fazenda
+            </h2>
+            <p class="text-center">Seja bem vindo ao formulário de informações da fazenda!</p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="thumbnail container-painel-home">
+            <p class="text-center">
+                Aqui nesta página você encontrará um cadastro com informações importantes a serem preenchidas. Preencha
+                todos os campos, a fim de deixar o cadastro completo.
+            </p>
+            <p class="text-center">
+                Quando tiver preenchido todas as informações basta clicar em <i>"Salvar"</i>. Caso deseje retornar
+                para a página de listagem dos produtores basta clicar em <i>"Cancelar"</i>.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form novalidate name="formFazenda" ng-submit="submeterFazenda()">
+                    <fieldset>
+                        <legend>Informações Iniciais</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Nome:</label>
+                                <input ng-model="fazenda.nome" class="form-control" name="nome" type="text" placeholder="Nome da Fazenda" required ng-minlength="3" ng-maxlength="300" />
+                                <div ng-show="formFazenda.$submitted && formFazenda.nome.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o nome da fazenda!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.nome.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.nome.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O nome deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Área:</label>
+                                <input ng-model="fazenda.area" class="form-control" name="area" type="number" step="0.01" placeholder="Área da Fazenda" required />
+                                <div ng-show="formFazenda.$submitted && formFazenda.area.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha a área da fazenda!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>ID do Proprietário:</label>
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" ng-click="buscaProp()" class="btn btn-info"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                    <input ng-model="fazenda.produtorRuralId" class="form-control" name="produtorRuralId" type="text" placeholder="Propietário da Fazenda." value="fazenda.produtorRuralId" required/>
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.produtorRuralId.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor escolha um proprietário!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Endereço</legend>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Logradouro:</label>
+                                <input ng-model="fazenda.endereco.logradouro" class="form-control" name="logradouro" type="text" placeholder="Logradouro da Fazenda" required ng-minlength="3" ng-maxlength="500" />
+                                <div ng-show="formFazenda.$submitted && formFazenda.logradouro.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o logradouro da fazenda!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.logradouro.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O logradouro deve possuir no máximo 500 caracteres!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.logradouro.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O logradouro deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Número:</label>
+                                <input ng-model="fazenda.endereco.numero" class="form-control" name="numero" type="number" placeholder="Nº" required />
+                                <div ng-show="formFazenda.$submitted && formFazenda.numero.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o número do logradouro da fazenda!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-4">
+                                <label>Complemento:</label>
+                                <input ng-model="fazenda.endereco.complemento" class="form-control" name="complemento" type="text" placeholder="Complemento do logradouro" ng-minlength="3" ng-maxlength="500" />
+                                <div ng-show="formFazenda.$submitted && formFazenda.complemento.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o complemento do logradouro da fazenda!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.complemento.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O complemento do logradouro deve possuir no máximo 500 caracteres!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.complemento.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O complemento do logradouro deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>Bairro:</label>
+                                <input ng-model="fazenda.endereco.bairro" class="form-control" name="bairro" type="text" placeholder="Bairro da Fazenda" required ng-minlength="3" ng-maxlength="300" />
+                                <div ng-show="formFazenda.$submitted && formFazenda.bairro.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o bairro da fazenda!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.bairro.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O bairro deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.bairro.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O bairro deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>Cidade:</label>
+                                <input ng-model="fazenda.endereco.cidade" class="form-control" name="cidade" type="text" placeholder="Cidade da fazenda" required ng-minlength="3" ng-maxlength="300" />
+                                <div ng-show="formFazenda.$submitted && formFazenda.cidade.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha a cidade da fazenda!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.cidade.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A cidade deve possuir no máximo 300 caracteres!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.cidade.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;A cidade deve possuir no mínimo 3 caracteres!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>Estado:</label>
+                                <select ng-model="fazenda.endereco.estado" name="estado" class="form-control" required>
+                                    <option value="">Escolha um estado</option>
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS">Rio Grande do Sul</option>
+                                    <option value="RR">Rondônia</option>
+                                    <option value="RR">Roráima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+                                </select>
+                                <div ng-show="formFazenda.$submitted && formFazenda.estado.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o estado da fazenda!
+                                </div>
+                            </div>
+                            <div class="form-group col-xs-12 col-md-3">
+                                <label>CEP:</label>
+                                <input id="cepProdutor" ng-model="fazenda.endereco.cep" class="form-control" name="cep" type="text" placeholder="CEP da fazenda" required ng-minlength="10" ng-maxlength="10" />
+                                <div ng-show="formFazenda.$submitted && formFazenda.cep.$error.required" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;Por favor preencha o CEP da fazenda!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.cep.$error.maxlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O CEP deve possuir no máximo 10 caracteres!
+                                </div>
+                                <div ng-show="formFazenda.$submitted && formFazenda.cep.$error.minlength" class="alert alert-danger alerta-de-erro" role="alert">
+                                    <span class="glyphicon glyphicon-exclamation-sign"></span>
+                                    &nbsp;O CEP deve possuir no mínimo 10 caracteres!
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <button type="submit" class="btn btn-primary">
+                        <span class="glyphicon glyphicon-ok"></span>
+                        &nbsp;Salvar
+                    </button>
+                    &nbsp;
+                    <a href="" ng-click="voltarPagina()" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        &nbsp;Cancelar
+                    </a>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <div class="loader" ng-hide="!loading">
+                                <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $('#cepProdutor').mask('99.999-999');
+</script>

@@ -1,0 +1,86 @@
+﻿<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="jumbotron banner-header">
+                <h2 class="page-header">
+                    <span class="glyphicon glyphicon-piggy-bank"></span>
+                    &nbsp; Oferta nº {{cotacao.id}}
+                </h2>
+                <p>Informações Detalhadas da Oferta</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="thumbnail texto-explicativo">
+                <p class="text-center">
+                    Aqui nesta página você encontrará todas as informações registradas no sistema referente a
+                    oferta selecionada.
+                </p>
+                <p class="text-center">
+                    Caso deseje alterar alguma informação basta clicar no botão <i>"Editar"</i>. Caso deseje retornar
+                    para a página de listagem dos representantes basta clicar em <i>"Cancelar"</i>.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h2 class="text-center panel-title">Informações Pessoais</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <table class="table table-responsive table-striped table-hover">
+                                <tr>
+                                    <td>Id:</td>
+                                    <td><strong>{{cotacao.id}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Data:</td>
+                                    <td><strong>{{cotacao.data}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Representante:</td>
+                                    <td><strong>{{cotacao.representante.nome}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Fornecedor:</td>
+                                    <td><strong>{{cotacao.representante.fornecedor.razaoSocial}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Produto:</td>
+                                    <td><strong>{{cotacao.produto.nome}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Qtd:</td>
+                                    <td><strong>{{cotacao.qtd}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Preço Sugerido:</td>
+                                    <td><strong>{{cotacao.precoSugerido | currency}}</strong></td>
+                                </tr>
+                                <tr>
+                                    <td>Observações:</td>
+                                    <td><strong>{{cotacao.observacao}}</strong></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="" ng-click="voltarPagina()" class="btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span>
+                        &nbsp;Voltar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

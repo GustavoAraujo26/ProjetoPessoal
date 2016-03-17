@@ -1,0 +1,35 @@
+﻿<div class="loader" ng-hide="!carregandoTabela">
+    <img src="../../imagens/icones/ajax-loader.gif" class="loader" />
+</div>
+<div class="row">
+    <div class="col-xs-12 col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <table class="table table-responsive table-hover table-striped table-bordered table-condensed">
+                    <thead>
+                        <tr>
+                            <th><b>Id</b></th>
+                            <th><b>Nome</b></th>
+                            <th><b>Marca</b></th>
+                            <th><b>Ações</b></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="produto in produtos | filter: filtro | startFrom: (currentPage - 1) * pageSize | limitTo: pageSize">
+                            <td>{{produto.id}}</td>
+                            <td>{{produto.nome}}</td>
+                            <td>{{produto.marca}}</td>
+                            <td>
+                                <button class="btn btn-primary" ng-click="ok(produto.id)">
+                                    <span class="glyphicon glyphicon-check"></span>
+                                    &nbsp;Selecionar
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <uib-pagination total-items="produtos.length" ng-model="currentPage" items-per-page="pageSize"></uib-pagination>
+            </div>
+        </div>
+    </div>
+</div>
